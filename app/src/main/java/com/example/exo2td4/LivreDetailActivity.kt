@@ -3,6 +3,7 @@ package com.example.exo2td4
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_livre_detail.*
+import kotlinx.android.synthetic.main.fragment_livre_detail.*
 
 class LivreDetailActivity : AppCompatActivity() {
 

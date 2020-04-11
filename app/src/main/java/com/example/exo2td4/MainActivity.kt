@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_livre_detail.*
 
 class MainActivity : AppCompatActivity(), LivreAdapter.OnLivreListener {
     var toolbar: Toolbar? = null
@@ -47,9 +48,9 @@ class MainActivity : AppCompatActivity(), LivreAdapter.OnLivreListener {
         Toast.makeText(this, livre.titre, Toast.LENGTH_SHORT).show()
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            livre_titleland.text= livre.titre
-            livre_authorland.text= "Ecrit par "+livre.auteur
-            livre_descriptionland.text= "   "+livre.description
+            livre_title.text= livre.titre
+            livre_author.text= "Ecrit par "+livre.auteur
+            livre_description.text= "   "+livre.description
 
         } else {
             val intent= Intent(this, LivreDetailActivity::class.java)
